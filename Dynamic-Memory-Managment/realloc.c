@@ -1,5 +1,5 @@
-// SYNTAX : free(ptr);
-// free - frees the allocated memory
+// SYNTAX : ptr=realloc(ptr,10*sizeof(int));
+// realloc - "Re-allocate"
 #include<stdio.h>
 #include<stdlib.h>
 
@@ -8,6 +8,6 @@ int main(){
     int *ptr=(int*)malloc(5*sizeof(int));
 
     // Re-allocating a memory block of size int*10:
-    ptr=(int*)malloc(10*sizeof(int));
+    ptr=realloc(ptr,10*sizeof(int));
     return 0;
 }

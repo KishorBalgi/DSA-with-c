@@ -1,5 +1,5 @@
 // SYNTAX : free(ptr);
-// realloc - re-allocation:
+// free - "free the allocated memory"
 #include<stdio.h>
 #include<stdlib.h>
 
