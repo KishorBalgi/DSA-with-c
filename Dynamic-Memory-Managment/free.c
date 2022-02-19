@@ -1,4 +1,4 @@
-// SYNTAX : free(ptr);
+// 📌SYNTAX : free(ptr);
 // free - "free the allocated memory"
 #include<stdio.h>
 #include<stdlib.h>

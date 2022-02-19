@@ -1,40 +1,40 @@
-// Headers:
+// 📌Headers:
 #include<stdio.h>
 #include<stdlib.h>
 #include<stdbool.h>
 
-// Globals:
+// 📌Globals:
 #define SIZE 5
 int s[SIZE];
 int top=-1;
 
-// Push Function:
+// 📌Push Function:
 bool push(int item){
     if(top==SIZE-1) return false;
     s[++top]=item;
     return true;
 }
-// Pop Function:
+// 📌Pop Function:
 int pop(){
     if(top==-1) return -1;
     return s[top--];
 }
-// isEmpty Function:
+// 📌isEmpty Function:
 bool isEmpty(){
     if(top==-1) return true;
     return false;
 }
-// isFull Function:
+// 📌isFull Function:
 bool isFull(){
     if(top==SIZE-1) return true;
     return false;
 }
-// Peek Function:
+// 📌Peek Function:
 int peek(){
     if(top==-1) return -1;
     return s[top];
 }
-
+// 📌Main function:
 int main(){
     int choice,item;
     while(1){

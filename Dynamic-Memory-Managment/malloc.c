@@ -1,4 +1,4 @@
-// SYNTAX : ptr = (cast-type*) malloc(byte-size);
+// 📌SYNTAX : ptr = (cast-type*) malloc(byte-size);
 // malloc - "Memory Allocation"
 
 #include<stdio.h>

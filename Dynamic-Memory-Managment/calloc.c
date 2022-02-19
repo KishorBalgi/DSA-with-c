@@ -1,4 +1,4 @@
-// SYNTAX : ptr = (cast-type*)calloc(n,element-size);
+// 📌SYNTAX : ptr = (cast-type*)calloc(n,element-size);
 // calloc - "Contagious Allocation"
 #include<stdio.h>
 #include<stdlib.h>

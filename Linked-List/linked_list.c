@@ -1,15 +1,15 @@
-// Headers:
+// 📌Headers:
 #include<stdio.h>
 #include<stdlib.h>
 #include<stdbool.h>
 
-// Data node structure definition:
+// 📌Data node structure definition:
 typedef struct node{
     int data;
     struct node* next;
 }NODE;
 
-// Head node structure definition:
+// 📌Head node structure definition:
 typedef struct{
     int count;
     NODE* head;
@@ -17,7 +17,7 @@ typedef struct{
     NODE* rear;
 }LIST;
 
-// Create List:
+// 📌Create List:
 LIST* createList(){
     LIST* list;
     list=(LIST*)malloc(sizeof(LIST));
@@ -28,7 +28,8 @@ LIST* createList(){
     }
     return list;
 }
-// Create data node:
+
+// 📌Create data node:
 NODE* createNode(){
     NODE* pNew;
     pNew=(NODE*)malloc(sizeof(NODE));
@@ -36,12 +37,14 @@ NODE* createNode(){
     pNew->next=NULL;
     return pNew;
 }
-// isEmpty:
+
+// 📌isEmpty:
 bool isEmpty(LIST* pList){
     if(pList->head==NULL) return true;
     return false;
 }
-// Insert at front:
+
+// 📌Insert at front:
 bool insertAtFront(LIST* pList,int data){
     NODE* pNew;
     if(!(pNew=createNode())) return false;
@@ -56,7 +59,8 @@ bool insertAtFront(LIST* pList,int data){
     pList->count=pList->count+1;
     return true;
 }
-// Insert at end:
+
+// 📌Insert at end:
 bool insertAtEnd(LIST* pList,int data){
     NODE* pNew;
     if(!(pNew=createNode())) return false;
@@ -72,7 +76,8 @@ bool insertAtEnd(LIST* pList,int data){
     pList->count=pList->count+1;
     return true;
 }
-// Insert in order:
+
+// 📌Insert in order:
 bool insertInOrder(LIST* pList,int data){
     NODE* pNew;
     NODE* pre=NULL;
@@ -109,7 +114,8 @@ bool insertInOrder(LIST* pList,int data){
     pList->count=pList->count+1;
     return true;
 }
-// Delete at end:
+
+// 📌Delete at end:
 bool deleteAtEnd(LIST *pList){
     NODE* pre=NULL;
     NODE* tptr=pList->head;
@@ -130,18 +136,21 @@ bool deleteAtEnd(LIST *pList){
     pList->count=pList->count-1;
     return true;
 }
-// Delete at front:
+
+// 📌Delete at front:
 bool deleteAtFront(LIST *pList){
     if(isEmpty(pList)) return false;
     pList->head=pList->head->next;
     pList->count=pList->count-1;
     return true;
 }
-// Count:
+
+// 📌Count:
 int count(LIST* pList){
     return pList->count;
 }
-// Display list:
+
+// 📌Display list:
 void displayList(LIST* pList){
     NODE* tptr=pList->head;
     if(tptr==NULL) {
@@ -157,7 +166,8 @@ void displayList(LIST* pList){
     printf("\n");
     return;
 }
-// Search:
+
+// 📌Search:
 bool search(LIST* pList,int data){
     NODE* tptr=pList->head;
     if(tptr==NULL) {
@@ -170,7 +180,8 @@ bool search(LIST* pList,int data){
     }
     return false;
 }
-// Destroy List:
+
+// 📌Destroy List:
 bool destroyList(LIST* pList){
     NODE* tptr=pList->head;
     NODE* p;
@@ -182,6 +193,8 @@ bool destroyList(LIST* pList){
     free(pList);
     return true;
 }
+
+// 📌Main function:
 int main(){
     int choice,data;
     LIST* list;

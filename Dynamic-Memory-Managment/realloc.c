@@ -1,4 +1,4 @@
-// SYNTAX : ptr=realloc(ptr,10*sizeof(int));
+// 📌SYNTAX : ptr=realloc(ptr,10*sizeof(int));
 // realloc - "Re-allocate"
 #include<stdio.h>
 #include<stdlib.h>
