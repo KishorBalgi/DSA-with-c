@@ -21,6 +21,17 @@ Data Structures and Algorithms Repository.
 ## Linked List :
 
 - [Linked List](https://github.com/KishorBalgi/DSA/blob/master/Linked-List/linked_list.c)
+  #### Features :
+  - Create List
+  - Display List
+  - Insert at front
+  - Insert at end
+  - Insert in order
+  - Delete at front
+  - Delete at end
+  - Search
+  - Display count
+  - Destroy List
 
 ## Stacks :
 
