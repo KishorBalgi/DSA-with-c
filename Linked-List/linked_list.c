@@ -106,6 +106,7 @@ bool insertInOrder(LIST* pList,int data){
                 tptr=tptr->next;
                 if(tptr==NULL){
                     pre->next=pNew;
+                    pList->rear=pNew;
                     break;
                 }
             }
