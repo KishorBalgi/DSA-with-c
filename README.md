@@ -36,11 +36,25 @@ Data Structures and Algorithms Repository.
 ## Stacks :
 
 - [Array Implementation](https://github.com/KishorBalgi/DSA/blob/master/Stacks/stack_array.c)
+
   #### Features :
+
   - Push
   - Pop
   - isEmpty
   - isFull
   - Peek
+
+- [Linked List Implementation](https://github.com/KishorBalgi/DSA/blob/master/Stacks/stack_linked_list.c)
+  #### Features :
+  - Create Stack
+  - Display Stack
+  - Push
+  - Pop
+  - Peek
+  - isEmpty
+  - isFull
+  - Count
+  - Destroy
 
 ## Queues :
