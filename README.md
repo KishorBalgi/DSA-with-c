@@ -58,3 +58,16 @@ Data Structures and Algorithms Repository.
   - Destroy
 
 ## Queues :
+
+- [Linked List Implementation](https://github.com/KishorBalgi/DSA/blob/master/Queues/queue_linked_list.c)
+  #### Features :
+  - Create Queue
+  - Display Queue
+  - Enqueue
+  - Dequeue
+  - Front
+  - Rear
+  - isEmpty
+  - isFull
+  - Count
+  - Destroy Queue

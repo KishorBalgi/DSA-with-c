@@ -133,7 +133,7 @@ int main(){
         // Push:
         case 3: printf("Enter the number to be pushed : ");
                 scanf("%d",&data);
-                if(push(stack,data)) printf("\nuccessfully pushed.\n");
+                if(push(stack,data)) printf("\nSuccessfully pushed.\n");
                 else printf("\ncould not push into the stack.\n");
                 break;
         // Pop:
