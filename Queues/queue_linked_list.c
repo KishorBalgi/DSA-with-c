@@ -158,11 +158,9 @@ int main(){
             case 5: if(front(queue,&data)) printf("\nThe front item is : %d\n",data);
                     else printf("\nQueue is empty.\n");
                     break;
-                    break;
             // Rear:
             case 6: if(rear(queue,&data)) printf("\nThe Rear item is : %d\n",data);
                     else printf("\nQueue is empty.\n");
-                    break;
                     break;
             // isEmpty:
             case 7: if(isEmpty(queue))printf("\nQueue is empty.\n");

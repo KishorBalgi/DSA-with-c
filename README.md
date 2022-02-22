@@ -59,6 +59,18 @@ Data Structures and Algorithms Repository.
 
 ## Queues :
 
+- [Array Implementation](https://github.com/KishorBalgi/DSA/blob/master/Queues/queue_array.c)
+
+  #### Features :
+
+  - Display Queue
+  - Enqueue
+  - Dequeue
+  - Front
+  - Rear
+  - isEmpty
+  - isFull
+
 - [Linked List Implementation](https://github.com/KishorBalgi/DSA/blob/master/Queues/queue_linked_list.c)
   #### Features :
   - Create Queue
