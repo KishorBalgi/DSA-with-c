@@ -44,12 +44,11 @@ bool enqueue(QUEUE* pQueue,int data){
     pNew->data=data;
     if(pQueue->front==NULL){
         pQueue->front=pNew;
-        pQueue->rear=pNew;
     }
     else{
         pQueue->rear->next=pNew;
-        pQueue->rear=pNew;
     }
+    pQueue->rear=pNew;
     pQueue->count= pQueue->count +1;
     return true;
 }
