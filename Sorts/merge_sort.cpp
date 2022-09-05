@@ -41,19 +41,12 @@ void Merge(int *a,int l,int m,int h){
 }
 
 // 📌 Merge Sort Function:
-void MergeSort(int *a,int n){
-    int p,i,l,m,h;
-    for(p=2;p<=n;p=p*2){
-        for(i=0;i+p-1<n;i=i+p){
-            l=i;
-            h=i+p-1;
-            m=(l+h)/2;
-            Merge(a,l,m,h);
-            printArr(a,n);
-        }
-    }
-    if(p/2<n){
-        Merge(a,0,p/2-1,n);
+void MergeSort(int *a,int l,int h){
+    if(l<h){
+        int mid=(l+h)/2;
+        MergeSort(a,l,mid);
+        MergeSort(a,mid+1,h);
+        Merge(a,l,mid,h);
     }
 }
 
@@ -78,7 +71,7 @@ int main(){
     // Delay:
     for(int i=0;i<10000;i++)
         for(int j=0;j<10000;j++);
-    MergeSort(a,n);
+    MergeSort(a,0,n);
     end=clock();
     cout<<"After Sorting :"<<endl;
     printArr(a,n);
