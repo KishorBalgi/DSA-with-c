@@ -10,23 +10,20 @@ void printArr(int a[],int n){
     cout<<endl;
 }
 
-// 📌 Swap Function:
-void swap(int* a,int* b){
-    int temp=*a;
-    *a=*b;
-    *b=temp;
-}
 
-// 📌 Selection Sort Function:
-void SelectionSort(int *a,int n){
-    int min,i,j;
-    for(i=0;i<n-1;i++){
-        min=i;
-        // Find Min index:
-        for(j=i+1;j<n;j++)
-            if(a[j]<a[min])
-                min=j;
-        swap(a[i],a[min]);
+// 📌Insertion Sort Function:
+void InsertionSort(int *a,int n){
+    int x,i,j;
+    for(i=1;i<n;i++){
+        j=i-1;
+        x=a[i];
+        while(a[j]>x && j>-1){
+            // Shift:
+            a[j+1]=a[j];
+            j--;
+        }
+        // Insert:
+        a[j+1]=x;
     }
 }
 
@@ -51,7 +48,7 @@ int main(){
     // Delay:
     for(int i=0;i<10000;i++)
         for(int j=0;j<10000;j++);
-    SelectionSort(a,n);
+    InsertionSort(a,n);
     end=clock();
     cout<<"After Sorting :"<<endl;
     printArr(a,n);
