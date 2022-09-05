@@ -10,19 +10,44 @@ void printArr(int a[],int n){
     cout<<endl;
 }
 
-// 📌Insertion Sort Function:
-void InsertionSort(int *a,int n){
-    int x,i,j;
-    for(i=1;i<n;i++){
-        j=i-1;
-        x=a[i];
-        while(a[j]>x && j>-1){
-            // Shift:
-            a[j+1]=a[j];
+// 📌 Swap Function:
+void swap(int* a,int* b){
+    int temp=*a;
+    *a=*b;
+    *b=temp;
+}
+
+// 📌 Partitioning Function:
+int partition(int *a,int l,int h){
+    int pivot=a[l];
+    int i=l,j=h;
+
+    do{
+        // Find element greater than pivot:
+        do{
+            i++;
+        }while(a[i]<=pivot);
+
+        // Find element less than or equal to pivot:
+        do{
             j--;
-        }
-        // Insert:
-        a[j+1]=x;
+        }while(a[j]>pivot);
+
+        // Swap the smaller and greater element if i<j:
+        if(i<j)
+            swap(&a[i],&a[j]);
+
+    }while(i<j);
+    swap(&a[l],&a[j]);
+    return j;
+}
+
+// 📌 Quick Sort Function:
+void QuickSort(int *a,int l,int h){
+    if(l<h){
+        int j=partition(a,l,h);
+        QuickSort(a,l,j);
+        QuickSort(a,j+1,h);
     }
 }
 
@@ -47,7 +72,7 @@ int main(){
     // Delay:
     for(int i=0;i<10000;i++)
         for(int j=0;j<10000;j++);
-    InsertionSort(a,n);
+    QuickSort(a,0,n);
     end=clock();
     cout<<"After Sorting :"<<endl;
     printArr(a,n);
