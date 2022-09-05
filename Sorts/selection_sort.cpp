@@ -17,18 +17,15 @@ void swap(int* a,int* b){
     *b=temp;
 }
 
-// 📌 Bubble Sort Function:
-void BubbleSort(int *a,int n){
-    int flag;
-    for(int i=0;i<n-1;i++){
-        flag=0;
-        for(int j=0;j<n-i-1;j++){
-            if(a[j]>a[j+1]){
-                swap(&a[j],&a[j+1]);
-                flag=1;
-            }
-        }
-        if(flag==0) break; //If the array is already sorted:
+// 📌 Selection Sort Function:
+void SelectionSort(int *a,int n){
+    int min,i,j;
+    for(i=0;i<n-1;i++){
+        min=i;
+        for(j=i+1;j<n;j++)
+            if(a[j]<a[min])
+                min=j;
+        swap(a[i],a[min]);
     }
 }
 
@@ -53,7 +50,7 @@ int main(){
     // Delay:
     for(int i=0;i<10000;i++)
         for(int j=0;j<10000;j++);
-    BubbleSort(a,n);
+    SelectionSort(a,n);
     end=clock();
     cout<<"After Sorting :"<<endl;
     printArr(a,n);
